@@ -61,7 +61,7 @@ class ResUsers(models.Model):
 
         except exceptions.AccessDenied:
             # Just be sure that parent methods aren't wrong
-            users = self.with_user(SUPERUSER_ID).search([("id", "=", self._uid)])
+            users = self.with_user(SUPERUSER_ID).search([("id", "=", self.env.uid)])
             if not users:
                 raise
 
