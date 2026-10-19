@@ -18,9 +18,10 @@ from odoo import (
     models,
     modules,
 )
-from odoo.http import fragment_to_query_string, request
+from odoo.http import request
 from odoo.tools.misc import clean_context
 
+from odoo.addons.auth_oauth.controllers.main import fragment_to_query_string
 from odoo.addons.web.controllers.home import Home
 from odoo.addons.web.controllers.utils import _get_login_redirect_url, ensure_db
 
